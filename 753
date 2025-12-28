@@ -1,0 +1,6 @@
+import itertools
+
+nums = list(map(int, input().split()))
+perms = list(itertools.permutations(nums))
+
+print(perms)
