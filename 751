@@ -1,0 +1,10 @@
+import os
+import time
+
+filename = input().strip()
+
+modified_time = os.path.getmtime(filename)
+created_time = os.path.getctime(filename)
+
+print("Last modified:", time.ctime(modified_time))
+print("Created:", time.ctime(created_time))
