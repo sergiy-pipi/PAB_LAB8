@@ -1,0 +1,11 @@
+import random
+import string
+
+n = int(input())
+k = int(input())
+
+chars = string.ascii_lowercase + string.ascii_uppercase + string.digits
+
+for _ in range(k):
+    password = ''.join(random.choice(chars) for _ in range(n))
+    print(password)
