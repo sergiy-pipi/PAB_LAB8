@@ -1,0 +1,8 @@
+import os
+
+while True:
+    try:
+        filename = input().strip()
+        print(os.path.isfile(filename))
+    except EOFError:
+        break
