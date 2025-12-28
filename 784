@@ -1,0 +1,14 @@
+from operator import itemgetter
+
+filename = input().strip()  # наприклад: input.txt
+
+students = []
+
+with open(filename, 'r', encoding='utf-8') as f:
+    for line in f:
+        data = tuple(x.strip() for x in line.split(','))
+        students.append(data)
+
+students.sort(key=itemgetter(2))
+
+print(students)
